@@ -1,0 +1,87 @@
+$orange: #FF8200;
+$smokey: rgb(53, 54, 56);
+$white: #FFFFFF;
+
+body {
+    margin: 0 auto;
+    max-width: 100%;
+    height: 100vh;
+}
+
+body a {
+    text-decoration: none;
+    color: $orange;
+}
+  
+#container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100%, 1fr));
+    grid-auto-rows: minmax(100vh, auto);
+}
+
+#navigation {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-auto-flow: column;
+    display: grid;
+    height: 8vh;
+    width: 100%;
+    position: fixed;
+    background-color: black;
+    z-index: 20;
+}
+
+#navLogo {
+    display: grid;
+    justify-content: start;
+    align-content: center;
+    color: white;
+    padding-left: 10px;
+}
+
+#navLinks {
+    display: grid;
+    justify-content: end;
+    align-content: center;
+    grid-auto-flow: column;
+    column-gap: 10px;
+    padding-right: 10px;
+}
+  
+#landingPage {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    display: grid;
+    background: url(../images/meamber.jpg);
+    background-size: cover;
+    filter: grayscale(0.75);
+}
+
+
+#portfolioPage {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: lightgreen;
+}
+
+#bioPage {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: lightskyblue;
+}
+
+#contactPage {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: lightcoral;
+}
+

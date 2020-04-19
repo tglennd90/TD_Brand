@@ -1,1 +1,119 @@
-/* No CSS *//*# sourceMappingURL=main.css.map */
+body {
+  margin: 0 auto;
+  max-width: 100%;
+  height: 100vh;
+}
+
+body a {
+  text-decoration: none;
+  color: #FF8200;
+}
+
+#container {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (minmax(100%, 1fr))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(100%, 1fr));
+  grid-auto-rows: minmax(100vh, auto);
+}
+
+#navigation {
+  -ms-grid-column: 1;
+      grid-column-start: 1;
+  grid-column-end: 2;
+  grid-auto-flow: column;
+  display: -ms-grid;
+  display: grid;
+  height: 8vh;
+  width: 100%;
+  position: fixed;
+  background-color: black;
+  z-index: 20;
+}
+
+#navLogo {
+  display: -ms-grid;
+  display: grid;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  color: white;
+  padding-left: 10px;
+}
+
+#navLinks {
+  display: -ms-grid;
+  display: grid;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: end;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  grid-auto-flow: column;
+  -webkit-column-gap: 10px;
+          column-gap: 10px;
+  padding-right: 10px;
+}
+
+#landingPage {
+  -ms-grid-column: 1;
+      grid-column-start: 1;
+  grid-column-end: 2;
+  display: -ms-grid;
+  display: grid;
+  background: url(../images/meamber.jpg);
+  background-size: cover;
+  -webkit-filter: grayscale(0.75);
+          filter: grayscale(0.75);
+}
+
+#portfolioPage {
+  -ms-grid-column: 1;
+      grid-column-start: 1;
+  grid-column-end: 2;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background: lightgreen;
+}
+
+#bioPage {
+  -ms-grid-column: 1;
+      grid-column-start: 1;
+  grid-column-end: 2;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background: lightskyblue;
+}
+
+#contactPage {
+  -ms-grid-column: 1;
+      grid-column-start: 1;
+  grid-column-end: 2;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background: lightcoral;
+}
+/*# sourceMappingURL=main.css.map */
