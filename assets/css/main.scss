@@ -6,11 +6,10 @@ body {
     margin: 0 auto;
     max-width: 100%;
     height: 100vh;
-}
 
-body a {
-    text-decoration: none;
-    color: $orange;
+    a {
+        text-decoration: none;
+    }
 }
   
 #container {
@@ -24,7 +23,7 @@ body a {
     grid-column-end: 2;
     grid-auto-flow: column;
     display: grid;
-    height: 8vh;
+    height: 10vh;
     width: 100%;
     position: fixed;
     background-color: black;
@@ -35,8 +34,11 @@ body a {
     display: grid;
     justify-content: start;
     align-content: center;
-    color: white;
     padding-left: 10px;
+
+    a {
+        color: lime;
+    }
 }
 
 #navLinks {
@@ -46,42 +48,450 @@ body a {
     grid-auto-flow: column;
     column-gap: 10px;
     padding-right: 10px;
+    font-size: 20px;
+
+    a {
+        color: $orange;
+        font-style: italic;
+    }
 }
   
 #landingPage {
+    height: 90vh;
+    padding-top: 10vh;
     grid-column-start: 1;
     grid-column-end: 2;
+    grid-row-start: 1;
+    grid-row-end: 2;
     display: grid;
     background: url(../images/meamber.jpg);
     background-size: cover;
-    filter: grayscale(0.75);
+    position: relative;
+    z-index: 2;
 }
 
+#landingPage::after {
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: black;
+    opacity: 0.3;
+    z-index: 3;
+}
 
-#portfolioPage {
+#welcomeText {
+    z-index: 4;
+}
+
+#welcomeUl {
+    color: $white;
+    margin: 45% 0 0 15%;
+    display: flex;
+    font-size: 3em;
+
+    li {
+        list-style: none;
+        letter-spacing: 5px;
+        font-style: italic;
+        animation: blink 5s ease-out infinite;
+    }
+}
+
+#welcomeUl li:nth-child(1) {
+    animation-delay: .2s;
+}
+
+#welcomeUl li:nth-child(2) {
+    animation-delay: .25s;
+}
+
+#welcomeUl li:nth-child(3) {
+    animation-delay: .3s;
+}
+
+#welcomeUl li:nth-child(4) {
+    animation-delay: .35s;
+}
+
+#welcomeUl li:nth-child(5) {
+    animation-delay: 0.4s;
+}
+
+#welcomeUl li:nth-child(6) {
+    animation-delay: 0.45s;
+}
+
+#welcomeUl li:nth-child(7) {
+    animation-delay: 0.5s;
+}
+
+#welcomeUl li:nth-child(8) {
+    animation-delay: 0.55s;
+}
+
+@keyframes blink {
+    0% {
+        color: $white;
+        text-shadow: none;
+    } 18% {
+        color: $white;
+        text-shadow: none;
+    } 20% {
+        color: $orange;
+        text-shadow: 0 0 7px $orange , 0 0 20px $orange;
+    } 30% {
+        color: $white;
+        text-shadow: none;
+    } 35% {
+        color: $orange;
+        text-shadow: 0 0 7px $orange , 0 0 20px $orange;
+    } 70% {
+        color: $white;
+        text-shadow: none;
+    } 85% {
+        color: $orange;
+        text-shadow: 0 0 7px $orange , 0 0 20px $orange;
+    } 90% {
+        color: $white;
+        text-shadow: none;
+    } 90% {
+        color: $white;
+        text-shadow: none;
+    }
+}
+
+#myName {
+    margin-left: 3%;
+    z-index: 4;
+}
+
+.myName {
+    font-size: 0;
+    color: transparent;
+    background-image: url(../images/whiteText.jpg);
+    -webkit-background-clip: text;
+    background-clip: text;
+    background-repeat: repeat-x;
+    animation: revealText1 5s ease-in-out;
+    animation-delay: 1.5s;
+    animation-fill-mode: forwards;
+
+    span {
+        color: $orange;
+    }
+}
+
+.myNameP {
+    font-size: 0;
+    font-style: oblique;
+    color: transparent;
+    background-image: url(../images/whiteText.jpg);
+    -webkit-background-clip: text;
+    background-clip: text;
+    background-repeat: repeat-x;
+    animation: revealText1 5s ease-in-out;
+    animation-delay: 1.5s;
+    animation-fill-mode: forwards;
+    margin-left: 7%;
+    
+    span {
+        color: $orange;
+        font-style: oblique;
+    }
+}
+
+@keyframes revealText1 {
+    0% {
+        font-size: 2em;
+        background-size: 0px;
+        background-position-y: 0%;
+    } 10% {
+        background-size: 10px;
+        background-position-y: 0%;
+    } 35% {
+        background-position-y: 100%;
+    } 45% {
+        background-position-y: 100%;
+    } 70% {
+        background-size: 10px;
+        background-position-y: 0%;
+    } 100% {
+        background-size: 100%;
+        font-size: 2em;
+    }
+}
+
+#showroomPage {
+    height: 90vh;
+    padding-top: 10vh;
     grid-column-start: 1;
     grid-column-end: 2;
+    grid-row-start: 2;
+    grid-row-end: 3;
     display: flex;
     align-items: center;
     justify-content: center;
-    background: lightgreen;
+    background: url(../images/gallery.jpg);
+    background-size: cover;
+    background-position: center;
 }
 
-#bioPage {
+#slideShow {
+    margin: 0 auto;
+    width: 70%;
+    max-width: 70%;
+    height: 70%;
+    text-align: center;
+
+    input[type=radio] {
+        display: none;
+    }
+
+    label {
+        cursor: pointer;
+        text-decoration: none;
+    }
+}
+
+#slides {
+    margin-top: 25.5%;
+    padding: 2%;
+    border: 3px solid $smokey;
+    background-color: $white;
+    position: relative;
+    z-index: 1;
+}
+
+.outer {
+    width: 100%;
+    overflow: hidden;
+}
+
+#slide1:checked ~ #slides .inner {
+    margin-left: 0%;
+}
+
+#slide2:checked ~ #slides .inner {
+    margin-left: -100%;
+}
+
+#slide3:checked ~ #slides .inner {
+    margin-left: -200%;
+}
+
+#slides .inner {
+    transition: margin-left 1s cubic-bezier(0.800, 0.000, 0.200, 1.000);
+    width: 400%;
+    height: 170px;
+    line-height: 0;
+}
+
+#slides .slide {
+    width: 25%;
+    float: left;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.slide1 {
+    background-color: cornflowerblue;
+}
+
+.slide2 {
+    background-color: yellow;
+}
+
+.slide3 {
+    background-color: green;
+}
+
+#slideControlButtons {
+    margin: 50px 0 0 0;
+    text-align: center;
+
+    label {
+        display: inline-block;
+        width: 10px;
+        height: 10px;
+        background-color: $smokey;
+        margin: 0 10px;
+    }
+}
+
+#slide1:checked ~ #slideControlButtons label:nth-child(1),
+#slide2:checked ~ #slideControlButtons label:nth-child(2),
+#slide3:checked ~ #slideControlButtons label:nth-child(3) {
+    background-color: $orange;
+}
+
+#sagaPage {
+    height: 90vh;
+    padding-top: 10vh;
     grid-column-start: 1;
     grid-column-end: 2;
+    grid-row-start: 3;
+    grid-row-end: 4;
     display: flex;
     align-items: center;
     justify-content: center;
     background: lightskyblue;
 }
 
-#contactPage {
+#networkPage {
+    height: 90vh;
+    padding-top: 10vh;
     grid-column-start: 1;
     grid-column-end: 2;
+    grid-row-start: 4;
+    grid-row-end: 5;
     display: flex;
     align-items: center;
     justify-content: center;
-    background: lightcoral;
+    flex-direction: column;
+    position: relative;
+
+    video {
+        width: 100%;
+    }
+}
+
+#earth {
+    width: 100%;
+    height: auto;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+@media (min-aspect-ratio: 16/9) {
+    #earth {
+        width: 100%;
+        height: 100%;
+    }
+}
+
+@media (min-aspect-ratio: 16/9) {
+    #earth {
+        width: 100%;
+        height: 100%;
+    }
+}
+
+@media (max-width: 767px) {
+    #earth {
+        display: none;
+    }
+
+    #networkPage {
+        background: url("../images/homeoffice.jpg");
+        background-color: white;
+        background-size: cover;
+    }
+}
+
+.contactForm {
+    width: 85%;
+    height: 65%;
+    max-width: 600px;
+    background: $smokey;
+    // background: transparent;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 20px 30px;
+    box-sizing: border-box;
+    text-align: right;
+
+    h1 {
+        font-weight: 300;
+        margin-bottom: 5%;
+        font-style: oblique;
+        font-size: 25px;
+        color: $white;
+    }
+}
+
+#nameField, #emailField, #subjectField, #messageField {
+    margin: 2% 0 2% 0;
+    padding: 1% 2%;
+
+    label {
+        display: block;
+        text-align: left;
+        text-transform: uppercase;
+        font-size: 15px;
+        font-style: oblique;
+        font-weight: 300;
+        color: $white;
+    }
+
+    input, textarea {
+        width: 100%;
+        border: none;
+        background: none;
+        outline: none;
+        font-size: 18px;
+        margin-top: 2%;
+        border-top: 2px solid $orange;
+        color: $white;
+    }
+}
+
+#submitDiv {
+    position: relative;
+    z-index: 1;
+}
+
+#submitDiv::before {
+    content: "";
+    position: absolute;
+    top: o;
+    left: 0;
+    width: 60%;
+    height: 100%;
+    margin-left: 20%;
+    background-color: $orange;
+    filter: blur(15px);
+    z-index: -1;
+}
+
+#submitButton {
+    display: block;
+    // background-color: $orange;
+    border-top: 2px solid $white;
+    border-bottom: 2px solid $white;
+    padding: 10px 0;
+    color: $white;
+    text-transform: uppercase;
+    cursor: pointer;
+    margin-top: 8%;
+    margin-left: 20%;
+    text-align: center;
+    width: 60%;
+    font-style: oblique;
+    letter-spacing: 3px;
+}
+
+#icons {
+    color: $orange;
+    display: flex;
+    flex-direction: row;
+    position: absolute;
+    bottom: 5%;
+    left: 30%;
+
+    .github {
+       margin-right: 25%; 
+    }
+
+    .linkedin {
+        margin-left: 55%;
+    }
 }
 

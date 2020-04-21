@@ -17,6 +17,10 @@
     <!-- ========================= -->
     <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&display=swap" rel="stylesheet">
 
+    <!-- Font Awesome -->
+    <!-- ========================= -->
+    <script src="https://kit.fontawesome.com/0570c2f73b.js" crossorigin="anonymous"></script>
+
     <!-- My CSS -->
     <!-- ========================= -->
     <link rel="stylesheet" href="assets/css/main.css">
@@ -38,13 +42,13 @@
         <div id="navigation">
 
             <div id="navLogo">
-                <h2>LOGO</h2>
+                <p><a href="#landingPage"><i class="fas fa-seedling fa-2x"></i></a></p>
             </div>
 
             <div id="navLinks">
-                <a href="#">Showroom</a>
-                <a href="#">Saga</a>
-                <a href="#">Network</a>
+                <a href="#showroomPage">Showroom</a>
+                <a href="#sagaPage">Saga</a>
+                <a href="#networkPage">Network</a>
             </div>
 
         <!-- !END Nav -->
@@ -54,7 +58,27 @@
 
         <!-- Landing Page -->
         <!-- ========================= -->
-        <div id="landingPage">                
+        <div id="landingPage"> 
+              
+            <!-- Welcome Text -->
+            <div id="welcomeText">
+                <ul id="welcomeUl">
+                    <li>W</li>
+                    <li>e</li>
+                    <li>l</li>
+                    <li>c</li>
+                    <li>o</li>
+                    <li>m</li>
+                    <li>e</li>
+                    <li>!</li>
+                </ul>
+            </div>
+
+            <!-- My Name -->
+            <div id="myName"> 
+                <div class="myName"><span>T</span>a<span>t</span>um <span>D</span>aily</div>
+                <p class="myNameP">fron<span>t</span>-en<span>d</span> web <span>d</span>eveloper</p>
+            </div>
 
         <!-- !END Landing -->
         <!-- !========================= -->
@@ -62,25 +86,157 @@
 
         <!-- Showroom Page -->
         <!-- ========================= -->
-        <div id="portfolioPage">
         
-        <!-- !END Portfolio -->
+        <div id="showroomPage">
+        
+            <div id="slideShow">
+
+                <input type="radio" name="ssButton" id="slide1" checked>
+                <input type="radio" name="ssButton" id="slide2">
+                <input type="radio" name="ssButton" id="slide3">
+
+                <!-- SlideShow -->
+                <div id="slides">
+                    <div class="outer">
+                        <div class="inner">
+
+                            <!-- Slide #1 -->
+                            <div class="slide1 slide">
+                                <div class="slideContent">
+                                    <div class="projectCard">
+                                        <div class="cardTitle">Project #1</div>
+
+                                        <div class="cardGallery"></div>
+
+                                        <div class="cardInfo">
+                                            <h3>Technologies Used:</h3>
+                                            <ul>
+                                                <li></li>
+                                                <li></li>
+                                                <li></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Slide #2 -->
+                            <div class="slide2 slide">
+                                <div class="slideContent">
+                                    <div class="projectCard">
+                                        <div class="cardTitle">Project #2</div>
+
+                                        <div class="cardGallery"></div>
+
+                                        <div class="cardInfo">
+                                            <h3>Technologies Used:</h3>
+                                            <ul>
+                                                <li></li>
+                                                <li></li>
+                                                <li></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Slide #3 -->
+                            <div class="slide3 slide">
+                                <div class="slideContent">
+                                    <div class="projectCard">
+                                        <div class="cardTitle">Project #3</div>
+
+                                        <div class="cardGallery"></div>
+
+                                        <div class="cardInfo">
+                                            <h3>Technologies Used:</h3>
+                                            <ul>
+                                                <li></li>
+                                                <li></li>
+                                                <li></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Slide Control Buttons -->
+                <div id="slideControlButtons">
+                    <label for="slide1"></label>
+                    <label for="slide2"></label>
+                    <label for="slide3"></label>
+                </div>                
+
+            </div>    
+        
+        <!-- !END Showroom -->
         <!-- !========================= -->
         </div>
 
         <!-- Saga Page -->
         <!-- ========================= -->
-        <div id="bioPage">
+        <div id="sagaPage">
+        
          
-        <!-- !END Bio -->
+        <!-- !END Saga -->
         <!-- !========================= -->
         </div>
         
         <!-- Network Page -->
         <!-- ========================= -->
-        <div id="contactPage">
+        <div id="networkPage">
 
-        <!-- !END Contact -->
+            <video id="earth" autoplay muted>
+                <source src="earth.mp4" type="video/mp4">
+            </video>
+        
+            <!-- Contact Form -->
+            <div class="contactForm">
+
+                <h1>Email me!</h1>
+
+                <!-- Name -->
+                <div id="nameField">
+                    <label for="nameInput" id="nameLabel">Name:</label>
+                    <input type="text" name="nameInput" id="nameInput">
+                </div>
+
+                <!-- Email -->
+                <div id="emailField">
+                    <label for="emailInput" id="emailLabel">Email:</label>
+                    <input type="email" name="emailInput" id="emailInput">
+                </div>
+
+                <!-- Subject -->
+                <div id="subjectField">
+                    <label for="subjectInput" id="subjectLabel">Subject:</label>
+                    <input type="text" name="subjectInput" id="subjectInput">
+                </div>
+
+                <!-- Message -->
+                <div id="messageField">
+                    <label for="messageInput" id="messageLabel">Message:</label>
+                    <textarea name="messageInput" id="messageInput" rows="3" cols="23"></textarea>
+                </div>
+
+                <!-- Submit -->
+                <div id="submitDiv"><a id="submitButton" href="#">Send  <i class="fas fa-envelope"></i></a></div>
+
+            <!-- !END Form -->
+            </div>
+
+            <!-- Icons -->
+            <div id="icons">
+                <div class="github"><i class="fab fa-github fa-3x"></i></div>
+                <div class="linkedin"><i class="fab fa-linkedin-in fa-3x"></i></div>
+
+            </div>
+
+        <!-- !END Network -->
         <!-- !========================= -->
         </div>
             
