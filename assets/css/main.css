@@ -488,9 +488,14 @@ body a {
 
 #cardTitle1 {
   position: absolute;
-  bottom: 13px;
-  left: 0;
+  bottom: 60px;
+  right: -60px;
   font-size: 20px;
+}
+
+#cardTitle1 p {
+  margin-top: 5%;
+  margin-bottom: 5%;
 }
 
 #cardGallery1 {
