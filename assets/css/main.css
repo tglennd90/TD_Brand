@@ -42,7 +42,7 @@ body a {
 }
 
 #navLogo a {
-  color: lime;
+  color: #FF8200;
 }
 
 #navLinks {
@@ -375,7 +375,7 @@ body a {
   margin-top: 25.5%;
   padding: 2%;
   border: 3px solid #353638;
-  background-color: #FFFFFF;
+  background-color: #353638;
   position: relative;
   z-index: 1;
 }
@@ -383,6 +383,8 @@ body a {
 .outer {
   width: 100%;
   overflow: hidden;
+  -webkit-box-shadow: #353638 0 8px 6px 8px;
+          box-shadow: #353638 0 8px 6px 8px;
 }
 
 #slide1:checked ~ #slides .inner {
@@ -421,34 +423,132 @@ body a {
 }
 
 .slide1 {
-  background-color: cornflowerblue;
+  background-color: #FFFFFF;
 }
 
 .slide2 {
-  background-color: yellow;
+  background-color: #FFFFFF;
 }
 
 .slide3 {
-  background-color: green;
+  background-color: #FFFFFF;
 }
 
 #slideControlButtons {
-  margin: 50px 0 0 0;
+  margin: 10px 0 0 0;
   text-align: center;
 }
 
 #slideControlButtons label {
   display: inline-block;
-  width: 10px;
+  width: 50px;
   height: 10px;
   background-color: #353638;
-  margin: 0 10px;
+  margin: 0 15px;
 }
 
 #slide1:checked ~ #slideControlButtons label:nth-child(1),
 #slide2:checked ~ #slideControlButtons label:nth-child(2),
 #slide3:checked ~ #slideControlButtons label:nth-child(3) {
   background-color: #FF8200;
+}
+
+.projectCard {
+  width: 220px;
+  height: 155px;
+  margin-left: -4%;
+  padding: 4%;
+  position: relative;
+}
+
+.cardTitle {
+  position: absolute;
+  width: 100%;
+  height: 20px;
+  padding-top: 5%;
+  font-size: 24px;
+  font-weight: 600;
+  font-style: italic;
+  letter-spacing: 1px;
+  color: #FFFFFF;
+}
+
+.cardGallery {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 125px;
+}
+
+#projectCard1 {
+  background: url(../images/p1.jpg);
+  background-size: cover;
+}
+
+#cardTitle1 {
+  position: absolute;
+  bottom: 13px;
+  left: 0;
+}
+
+#cardGallery1 {
+  color: #FFFFFF;
+}
+
+#cardGallery1 a {
+  color: #FFFFFF;
+}
+
+#cardGallery1 i:hover {
+  color: #FF8200;
+}
+
+#gh1 {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+}
+
+#web1 {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+}
+
+#projectCard2 {
+  background: url(../images/p2.jpg);
+  background-size: cover;
+}
+
+#cardTitle2 {
+  position: absolute;
+  bottom: 0;
+  left: -20%;
+}
+
+#cardGallery2 {
+  color: #FFFFFF;
+}
+
+#cardGallery2 a {
+  color: #FFFFFF;
+}
+
+#cardGallery2 i:hover {
+  color: #FF8200;
+}
+
+#gh2 {
+  position: absolute;
+  top: -45px;
+  left: 3px;
+}
+
+#web2 {
+  position: absolute;
+  top: -10px;
+  left: 3px;
 }
 
 #sagaPage {
@@ -460,16 +560,175 @@ body a {
   -ms-grid-row: 3;
       grid-row-start: 3;
   grid-row-end: 4;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  background: lightskyblue;
+  background-color: #353638;
+  position: relative;
+}
+
+#aboutMe {
+  padding-top: 2%;
+  font-size: 21px;
+  color: #FFFFFF;
+}
+
+#aboutMe img {
+  height: 100%;
+  width: 100%;
+}
+
+.circleImage {
+  width: 220px;
+  height: 220px;
+  position: relative;
+  overflow: hidden;
+}
+
+#circleImage1 {
+  float: left;
+  margin: 20px;
+  shape-outside: circle();
+}
+
+#imageDiv1 {
+  width: 200px;
+  height: 200px;
+  margin: 10% auto;
+  -webkit-transform: scale(0.8);
+          transform: scale(0.8);
+}
+
+.cube {
+  -webkit-animation: rotateCube 15s ease infinite;
+          animation: rotateCube 15s ease infinite;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+  -webkit-transform-origin: 100px 100px 0;
+          transform-origin: 100px 100px 0;
+}
+
+.cube div {
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  line-height: 200px;
+}
+
+.side1 {
+  background: url(../images/all1.jpg);
+  background-size: cover;
+  background-position: center center;
+  -webkit-transform: translateZ(100px);
+          transform: translateZ(100px);
+}
+
+.side2 {
+  background: url(../images/em1.jpg);
+  background-size: cover;
+  background-position: center center;
+  -webkit-transform: rotateY(90deg) translateZ(100px);
+          transform: rotateY(90deg) translateZ(100px);
+}
+
+.side3 {
+  background: url(../images/meem.jpg);
+  background-size: cover;
+  background-position: center center;
+  -webkit-transform: rotateY(90deg) rotateX(90deg) translateZ(100px);
+          transform: rotateY(90deg) rotateX(90deg) translateZ(100px);
+}
+
+.side4 {
+  background: url(../images/em2.jpg);
+  background-size: cover;
+  background-position: center center;
+  -webkit-transform: rotateY(180deg) rotateZ(90deg) translateZ(100px);
+          transform: rotateY(180deg) rotateZ(90deg) translateZ(100px);
+}
+
+.side5 {
+  background: url(../images/amberem1.jpg);
+  background-size: cover;
+  background-position: center center;
+  -webkit-transform: rotateY(-90deg) rotateZ(90deg) translateZ(100px);
+          transform: rotateY(-90deg) rotateZ(90deg) translateZ(100px);
+}
+
+.side6 {
+  background: url(../images/all2.jpg);
+  background-size: cover;
+  background-position: center center;
+  -webkit-transform: rotateX(-90deg) translateZ(100px);
+          transform: rotateX(-90deg) translateZ(100px);
+}
+
+@-webkit-keyframes rotateCube {
+  from, to {
+    -webkit-transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+            transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+  }
+  16% {
+    -webkit-transform: rotateY(-90deg);
+            transform: rotateY(-90deg);
+  }
+  33% {
+    -webkit-transform: rotateY(-90deg) rotateZ(90deg);
+            transform: rotateY(-90deg) rotateZ(90deg);
+  }
+  50% {
+    -webkit-transform: rotateY(-180deg) rotateZ(90deg);
+            transform: rotateY(-180deg) rotateZ(90deg);
+  }
+  66% {
+    -webkit-transform: rotateY(-270deg) rotateX(90deg);
+            transform: rotateY(-270deg) rotateX(90deg);
+  }
+  83% {
+    -webkit-transform: rotateX(90deg);
+            transform: rotateX(90deg);
+  }
+  100% {
+  }
+}
+
+@keyframes rotateCube {
+  from, to {
+    -webkit-transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+            transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+  }
+  16% {
+    -webkit-transform: rotateY(-90deg);
+            transform: rotateY(-90deg);
+  }
+  33% {
+    -webkit-transform: rotateY(-90deg) rotateZ(90deg);
+            transform: rotateY(-90deg) rotateZ(90deg);
+  }
+  50% {
+    -webkit-transform: rotateY(-180deg) rotateZ(90deg);
+            transform: rotateY(-180deg) rotateZ(90deg);
+  }
+  66% {
+    -webkit-transform: rotateY(-270deg) rotateX(90deg);
+            transform: rotateY(-270deg) rotateX(90deg);
+  }
+  83% {
+    -webkit-transform: rotateX(90deg);
+            transform: rotateX(90deg);
+  }
+  100% {
+  }
+}
+
+#circleImage2 {
+  background: url(../images/flag.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  float: right;
+  margin: 20px;
+  width: 115px;
+  height: 115px;
+  shape-outside: circle();
+  border-radius: 50%;
 }
 
 #networkPage {

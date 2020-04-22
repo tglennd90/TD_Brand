@@ -37,7 +37,7 @@ body {
     padding-left: 10px;
 
     a {
-        color: lime;
+        color: $orange;
     }
 }
 
@@ -260,7 +260,7 @@ body {
     margin-top: 25.5%;
     padding: 2%;
     border: 3px solid $smokey;
-    background-color: $white;
+    background-color: $smokey;
     position: relative;
     z-index: 1;
 }
@@ -268,6 +268,7 @@ body {
 .outer {
     width: 100%;
     overflow: hidden;
+    box-shadow: $smokey 0 8px 6px 8px;
 }
 
 #slide1:checked ~ #slides .inner {
@@ -299,27 +300,27 @@ body {
 }
 
 .slide1 {
-    background-color: cornflowerblue;
+    background-color: $white;
 }
 
 .slide2 {
-    background-color: yellow;
+    background-color: $white;
 }
 
 .slide3 {
-    background-color: green;
+    background-color: $white;
 }
 
 #slideControlButtons {
-    margin: 50px 0 0 0;
+    margin: 10px 0 0 0;
     text-align: center;
 
     label {
         display: inline-block;
-        width: 10px;
+        width: 50px;
         height: 10px;
         background-color: $smokey;
-        margin: 0 10px;
+        margin: 0 15px;
     }
 }
 
@@ -329,6 +330,108 @@ body {
     background-color: $orange;
 }
 
+.projectCard {
+    // border: 2px solid white;
+    width: 220px;
+    height: 155px;
+    margin-left: -4%;
+    padding: 4%;
+    position: relative;
+}
+
+.cardTitle {
+    position: absolute;
+    width: 100%;
+    height: 20px;
+    padding-top: 5%;
+    font-size: 24px;
+    font-weight: 600;
+    font-style: italic;
+    letter-spacing: 1px;
+    color: $white;
+    // border: 2px solid white;
+}
+
+.cardGallery {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 125px;
+    // border: 2px solid violet;
+}
+
+#projectCard1 {
+    background: url(../images/p1.jpg);
+    background-size: cover;
+}
+
+#cardTitle1 {
+    position: absolute;
+    bottom: 13px;
+    left: 0;
+}
+
+#cardGallery1 {
+    color: $white;
+
+    a {
+        color: $white;
+    }
+
+    i:hover {
+        color: $orange;
+    }
+}
+
+#gh1 {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+}
+
+#web1 {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+}
+
+#projectCard2 {
+    background: url(../images/p2.jpg);
+    background-size: cover;
+}
+
+#cardTitle2 {
+    position: absolute;
+    bottom: 0;
+    left: -20%;
+}
+
+#cardGallery2 {
+    color: $white;
+
+    a {
+        color: $white;
+    }
+
+    i:hover {
+        color: $orange;
+    }
+}
+
+#gh2 {
+    position: absolute;
+    top: -45px;
+    left: 3px;
+}
+
+#web2 {
+    position: absolute;
+    top: -10px;
+    left: 3px;
+}
+
+
 #sagaPage {
     height: 90vh;
     padding-top: 10vh;
@@ -336,10 +439,131 @@ body {
     grid-column-end: 2;
     grid-row-start: 3;
     grid-row-end: 4;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: lightskyblue;
+    // display: flex;
+    // align-items: center;
+    // justify-content: center;
+    // flex-direction: column;
+    // background: url(../images/graywall.jpg);
+    // background-size: cover;
+    background-color: $smokey;
+    position: relative;
+}
+
+#aboutMe {
+    padding-top: 2%;
+    font-size: 21px;
+    color: $white;
+
+    img {
+        height: 100%;
+        width: 100%;
+    }
+}
+
+.circleImage {
+    width: 220px;
+    height: 220px;
+    position: relative;
+    overflow: hidden;
+}
+
+#circleImage1 {
+    float: left;
+    margin: 20px;
+    shape-outside: circle();
+}
+
+#imageDiv1 {
+    width: 200px;
+    height: 200px;
+    margin: 10% auto;
+    transform: scale(0.8);
+}
+
+.cube {
+    animation: rotateCube 15s ease infinite;
+    transform-style: preserve-3d;
+    transform-origin: 100px 100px 0;
+
+    div {
+        position: absolute;
+        width: 200px;
+        height: 200px;
+        line-height: 200px;
+    }
+}
+
+.side1 {
+    background: url(../images/all1.jpg);
+    background-size: cover;
+    background-position: center center;
+    transform: translateZ(100px);
+}
+
+.side2 {
+    background: url(../images/em1.jpg);
+    background-size: cover;
+    background-position: center center;
+    transform: rotateY(90deg) translateZ(100px);
+}
+
+.side3 {
+    background: url(../images/meem.jpg);
+    background-size: cover;
+    background-position: center center;
+    transform: rotateY(90deg) rotateX(90deg) translateZ(100px);
+}
+
+.side4 {
+    background: url(../images/em2.jpg);
+    background-size: cover;
+    background-position: center center;
+    transform: rotateY(180deg) rotateZ(90deg) translateZ(100px);
+}
+
+.side5 {
+    background: url(../images/amberem1.jpg);
+    background-size: cover;
+    background-position: center center;
+    transform: rotateY(-90deg) rotateZ(90deg) translateZ(100px);
+}
+
+.side6 {
+    background: url(../images/all2.jpg);
+    background-size: cover;
+    background-position: center center;
+    transform: rotateX(-90deg) translateZ(100px);
+}
+
+@keyframes rotateCube {
+    from, to {
+        transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+    } 16% {
+        transform: rotateY(-90deg);
+    } 33% {
+        transform: rotateY(-90deg) rotateZ(90deg);
+    } 50% {
+        transform: rotateY(-180deg) rotateZ(90deg);
+    } 66% {
+        transform: rotateY(-270deg) rotateX(90deg);
+    } 83% {
+        transform: rotateX(90deg);
+    } 100% {
+
+    }
+}
+
+#circleImage2 {
+    background: url(../images/flag.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    float: right;
+    margin: 20px;
+    width: 115px;
+    height: 115px;
+    shape-outside: circle();
+    border-radius: 50%;
 }
 
 #networkPage {
