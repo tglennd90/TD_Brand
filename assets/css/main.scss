@@ -370,6 +370,7 @@ body {
     position: absolute;
     bottom: 13px;
     left: 0;
+    font-size: 20px;
 }
 
 #cardGallery1 {
@@ -404,7 +405,7 @@ body {
 #cardTitle2 {
     position: absolute;
     bottom: 0;
-    left: -20%;
+    left: -15%;
 }
 
 #cardGallery2 {
@@ -443,15 +444,15 @@ body {
     // align-items: center;
     // justify-content: center;
     // flex-direction: column;
-    // background: url(../images/graywall.jpg);
-    // background-size: cover;
-    background-color: $smokey;
+    background: url(../images/graywall.jpg);
+    background-size: cover;
+    // background-color: $smokey;
     position: relative;
 }
 
 #aboutMe {
     padding-top: 2%;
-    font-size: 21px;
+    font-size: 19px;
     color: $white;
 
     img {
@@ -481,7 +482,7 @@ body {
 }
 
 .cube {
-    animation: rotateCube 15s ease infinite;
+    animation: rotateCube 20s ease-in-out infinite;
     transform-style: preserve-3d;
     transform-origin: 100px 100px 0;
 
@@ -559,9 +560,9 @@ body {
     background-repeat: no-repeat;
     background-position: center;
     float: right;
-    margin: 20px;
-    width: 115px;
-    height: 115px;
+    margin: 10px;
+    width: 130px;
+    height: 130px;
     shape-outside: circle();
     border-radius: 50%;
 }
@@ -642,7 +643,7 @@ body {
 }
 
 #nameField, #emailField, #subjectField, #messageField {
-    margin: 2% 0 2% 0;
+    margin: 3% 0 3% 0;
     padding: 1% 2%;
 
     label {
